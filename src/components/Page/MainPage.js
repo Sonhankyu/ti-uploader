@@ -1,13 +1,13 @@
 import React from 'react';
-import UserTable from "../Table/UserTable";
+import ExternalUserTable from "../Table/ExternalUserTable";
 import {Card, Col, Row} from "antd";
-import UserAddModal from "../Modal/UserAddModal";
+import ExternalUserAddModal from "../Modal/ExternalUserAddModal";
 
 const MainPage = () => {
     return (
         <Card title='Information' style={{borderRadius: '1rem'}}>
-            <UserAddModal/>
-            <UserTable/>
+            <ExternalUserAddModal/>
+            <ExternalUserTable/>
         </Card>
     );
 };

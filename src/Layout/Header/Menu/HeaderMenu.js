@@ -17,9 +17,13 @@ const HeaderMenu = () => {
         GetMenuItem('Admin', '/admin', <CrownOutlined />, null)
     ]
 
+    const onClickMenu = (menu) => {
+        history.push(menu.key);
+    }
+
     return (
         <>
-            <Menu theme='dark' mode='horizontal' defaultSelectedKeys={[path]} items={menuItems}/>
+            <Menu theme='dark' mode='horizontal' defaultSelectedKeys={[path]} items={menuItems} onClick={onClickMenu}/>
         </>
     );
 };

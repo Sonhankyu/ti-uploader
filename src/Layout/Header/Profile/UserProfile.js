@@ -6,6 +6,8 @@ import styled from "styled-components";
 const StyledCard = styled(Card)`
     .ant-card-body {
         background-color: #001529;
+        padding: 15px;
+        height: 64px;
     }
     .ant-card-meta-title {
         color: #dcdcdc;

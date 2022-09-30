@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Button, Modal} from "antd";
+import {Button, Form, Modal} from "antd";
 import {PlusOutlined} from '@ant-design/icons';
+import InternalUserAddForm from "../Form/InternalUserAddForm";
 
-const UserAddModal = () => {
-
+const ExternalUserAddModal = () => {
+    const [form] = Form.useForm();
     const [showModal, setShowModal] = useState(false);
 
     const openModal = () => {
@@ -26,12 +27,13 @@ const UserAddModal = () => {
                 open={showModal}
                 onOk={handleOk}
                 onCancel={handleCancel}
+                width={300}
             >
-
+                <InternalUserAddForm form={form}/>
             </Modal>
 
         </>
     );
 };
 
-export default UserAddModal;
+export default ExternalUserAddModal;

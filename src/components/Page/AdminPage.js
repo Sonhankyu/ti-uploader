@@ -1,13 +1,13 @@
 import React from 'react';
-import UserAddModal from "../Modal/UserAddModal";
-import UserTable from "../Table/UserTable";
 import {Card} from "antd";
+import InternalUserAddModal from "../Modal/InternalUserAddModal";
+import InternalUserTable from "../Table/InternalUserTable";
 
 const AdminPage = () => {
     return (
         <Card title='User Management' style={{borderRadius: '1rem'}}>
-            <UserAddModal/>
-            <UserTable/>
+            <InternalUserAddModal/>
+            <InternalUserTable/>
         </Card>
     );
 };
