@@ -5,6 +5,7 @@ import {Layout, Menu} from "antd";
 import {Content, Header} from "antd/es/layout/layout";
 import AppHeader from "./Layout/Header/AppHeader";
 import AppFooter from "./Layout/Footer/AppFooter";
+import AdminPage from "./components/Page/AdminPage";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
                     <Switch>
                         <Route exact path="/"/>
                         <Route exact path="/main" component={MainPage}/>
+                        <Route exact path="/admin" component={AdminPage}/>
                     </Switch>
                 </Content>
                 <AppFooter/>
