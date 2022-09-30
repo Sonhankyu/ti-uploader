@@ -5,6 +5,7 @@ import {Layout, Menu} from "antd";
 import {Content, Header} from "antd/es/layout/layout";
 import AppHeader from "./Layout/Header/AppHeader";
 import AppFooter from "./Layout/Footer/AppFooter";
+import LoginPage from "./components/Page/LoginPage";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
                 <AppHeader/>
                 <Content style={{padding: '30px 30px'}}>
                     <Switch>
-                        <Route exact path="/"/>
+                        <Route exact path="/" component={LoginPage}/>
                         <Route exact path="/main" component={MainPage}/>
                     </Switch>
                 </Content>
