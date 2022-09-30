@@ -19,6 +19,7 @@ function App() {
                         <Route exact path="/"/>
                         <Route exact path="/main" component={MainPage}/>
                         <Route exact path="/admin" component={AdminPage}/>
+                        <Route path='*' component={MainPage}/>
                     </Switch>
                 </Content>
                 <AppFooter/>
