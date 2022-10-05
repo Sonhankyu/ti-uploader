@@ -26,17 +26,18 @@ const AppHeader = () => {
     return (
         visible === true ?
             <Header style={{backgroundColor: '#001529'}}>
-                <Row>
-                    <Col span={1}>
-                        <span style={{height: '60px', marginTop: '5px'}} onClick={onClickMain}>
+                <Row justify='space-between'>
+                    <Row justify='space-between'>
+                        <span style={{height: '60px'}} onClick={onClickMain}>
                             <img style={{cursor: 'pointer', maxWidth: '100%', maxHeight: '100%'}} src="/images/TI_360x90.png" alt="logo"/>
                         </span>
-                    </Col>
-                    <Col span={3} offset={1}>
-                        <HeaderMenu/>
+                        <span style={{width: '210px', marginLeft: '5rem'}}>
+                            <HeaderMenu/>
+                        </span>
+                    </Row>
 
-                    </Col>
-                    <Col span={3} offset={16}>
+
+                    <Col>
                         <UserProfile/>
                     </Col>
                 </Row>

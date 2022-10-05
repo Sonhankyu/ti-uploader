@@ -3,7 +3,7 @@ import {Button, message, Table} from "antd";
 import FileListModal from "../Modal/FileListModal";
 import {LinkOutlined, MailOutlined} from "@ant-design/icons";
 
-const UserTable = () => {
+const ExternalUserTable = () => {
 
 
     const onClickCopy = () => {
@@ -40,4 +40,4 @@ const UserTable = () => {
     );
 };
 
-export default UserTable;
+export default ExternalUserTable;
