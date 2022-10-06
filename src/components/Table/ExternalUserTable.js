@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, message, Table} from "antd";
 import FileListModal from "../Modal/FileListModal";
 import {LinkOutlined, MailOutlined} from "@ant-design/icons";
@@ -6,7 +6,10 @@ import {LinkOutlined, MailOutlined} from "@ant-design/icons";
 const ExternalUserTable = () => {
 
 
-    const onClickCopy = () => {
+
+    const onClickCopy = (row) => {
+        console.log(row)
+        navigator.clipboard.writeText(row).then();
         message.success({content: 'URL copy'}).then();
     }
     const onClickSendMail = () => {
@@ -14,9 +17,9 @@ const ExternalUserTable = () => {
     }
 
     const dataSource = [
-        {key: 1, name: '김씨', startDate: '2022-01-01', endDate: '2022-02-01'},
-        {key: 2, name: '이씨', startDate: '2022-02-01', endDate: '2022-03-02'},
-        {key: 3, name: '박씨', startDate: '2022-03-01', endDate: '2022-04-03'},
+        {key: 1, name: '김씨', startDate: '2022-01-01', endDate: '2022-02-01', url: '김씨 URL'},
+        {key: 2, name: '이씨', startDate: '2022-02-01', endDate: '2022-03-02', url: '이씨 URL'},
+        {key: 3, name: '박씨', startDate: '2022-03-01', endDate: '2022-04-03', url: '박씨 URL'},
     ]
 
     const columns = [
@@ -24,13 +27,13 @@ const ExternalUserTable = () => {
         {title: 'Start Date', dataIndex: 'startDate', align: 'center'},
         {title: 'End Date', dataIndex: 'endDate', align: 'center'},
         {title: 'File List', align: 'center', render: (row) => (
-            <FileListModal/>
+                <FileListModal/>
             )},
         {title: 'URL', dataIndex: 'url', align: 'center', render: (row) => (
-            <Button onClick={onClickCopy} icon={<LinkOutlined />}/>
+                <Button onClick={() => onClickCopy(row)} icon={<LinkOutlined />}/>
             )},
         {title: 'Send Mail', dataIndex: 'sendMail', align: 'center', render: (row) => (
-            <Button onClick={onClickSendMail} icon={<MailOutlined />}/>
+                <Button onClick={onClickSendMail} icon={<MailOutlined />}/>
             )},
     ]
 
