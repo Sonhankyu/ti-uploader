@@ -9,6 +9,10 @@ import {applyMiddleware, createStore} from 'redux';
 import {logger} from "redux-logger/src";
 import rootSaga from "./_redux/sagas";
 import rootReducer from "./_redux/reducers";
+import axios from "axios";
+
+// axios.defaults.baseURL = 'http://192.168.0.100:3031';
+// axios.defaults.headers['X-AUTH-TOKEN'] = window.localStorage.getItem('token');
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(

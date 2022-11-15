@@ -1,7 +1,7 @@
 import React from 'react';
-import ExternalUserTable from "../Table/ExternalUserTable";
+import ExternalUserTable from "../components/Table/ExternalUserTable";
 import {Card, Col, Row} from "antd";
-import ExternalUserAddModal from "../Modal/ExternalUserAddModal";
+import ExternalUserAddModal from "../components/Modal/ExternalUserAddModal";
 
 const MainPage = () => {
     return (

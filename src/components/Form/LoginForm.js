@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch} from "react-redux";
 import {Col, Input, Row, Form, Button} from "antd";
 import {LockOutlined, UserOutlined} from "@ant-design/icons";
+import {authAction, loginAction} from "../../_redux/actions/authAction";
 
 const LoginForm = ({form}) => {
     useEffect(() => {
@@ -12,7 +13,7 @@ const LoginForm = ({form}) => {
 
     const onCLickLogin = () => {
         form.validateFields().then((values) => {
-            // dispatch(loginAction({"email": values.id, "password": values.password}));
+            dispatch(loginAction({"id": values.id, "password": values.password}));
         })
     };
 

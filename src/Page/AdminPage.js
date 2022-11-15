@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from "antd";
-import InternalUserAddModal from "../Modal/InternalUserAddModal";
-import InternalUserTable from "../Table/InternalUserTable";
+import InternalUserAddModal from "../components/Modal/InternalUserAddModal";
+import InternalUserTable from "../components/Table/InternalUserTable";
 
 const AdminPage = () => {
     return (
