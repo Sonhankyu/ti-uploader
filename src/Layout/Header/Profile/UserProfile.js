@@ -2,6 +2,8 @@ import React from 'react';
 import {Avatar, Button, Card, Divider, Space} from "antd";
 import {LogoutOutlined, UserOutlined} from "@ant-design/icons";
 import styled from "styled-components";
+import {useDispatch} from "react-redux";
+import {logoutAction} from "../../../_redux/actions/authAction";
 
 const StyledCard = styled(Card)`
     .ant-card-body {
@@ -19,14 +21,21 @@ const StyledCard = styled(Card)`
 
 const UserProfile = () => {
 
+    const dispatch = useDispatch();
     const {Meta} = Card;
+
+    const onClickLogout = () => {
+        const token = window.localStorage.getItem('token');
+        dispatch(logoutAction({jwt : token}));
+        window.localStorage.clear();
+    }
 
     return (
         <>
             <StyledCard bordered={false}>
                 <Space size='large' split={<Divider type='vertical' style={{backgroundColor: "#dcdcdc"}}/>}>
                     <Meta avatar={<Avatar icon={<UserOutlined/> } size='small'/> } title={'User Name'} style={{backgroundColor: ''}}/>
-                    <Button style={{borderRadius: '1rem'}} onClick={null} icon={<LogoutOutlined />}/>
+                    <Button style={{borderRadius: '1rem'}} onClick={onClickLogout} icon={<LogoutOutlined />}/>
                 </Space>
                 {/*<Card.Grid style={{width: '80%'}} hoverable={false}>*/}
 

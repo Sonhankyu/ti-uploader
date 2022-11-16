@@ -1,6 +1,6 @@
 import React from 'react';
 import {Avatar, Card, Col, Form, Row} from "antd";
-import LoginForm from "../Form/LoginForm";
+import LoginForm from "../components/Form/LoginForm";
 import {LockOutlined} from "@ant-design/icons";
 
 const LoginPage = () => {
