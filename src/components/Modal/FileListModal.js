@@ -1,38 +1,31 @@
 import React, {useState} from 'react';
 import {Button, Modal, Table} from "antd";
-import {FileSearchOutlined} from "@ant-design/icons";
 
-const FileListModal = () => {
+const FileListModal = ({fileList, showModal, setShowModal}) => {
 
-    const [showModal, setShowModal] = useState(false);
 
-    const openModal = () => {
-        setShowModal(true)
-    }
-    const handleOk = () => {
-        setShowModal(false);
-    }
     const handleCancel = () => {
         setShowModal(false);
     }
+    console.log(fileList)
 
     const columns = [
-        {title: 'File Name', align: 'center'},
-        {title: 'Upload Date / Time', align: 'center'},
+        {title: 'File Name', dataIndex: 'name', align: 'center'},
+        {title: 'Upload Date / Time', dataIndex: 'date', align: 'center'},
         {title: 'Download', align: 'center'},
     ]
 
 
     return (
         <>
-            <Button onClick={openModal} icon={<FileSearchOutlined />}/>
             <Modal
                 title='File List'
                 open={showModal}
                 footer={null}
                 onCancel={handleCancel}
+                width={800}
             >
-                <Table columns={columns}/>
+                <Table columns={columns} dataSource={fileList}/>
             </Modal>
         </>
     );

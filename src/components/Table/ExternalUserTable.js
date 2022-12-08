@@ -1,35 +1,37 @@
 import React, {useState} from 'react';
 import {Button, message, Table} from "antd";
 import FileListModal from "../Modal/FileListModal";
-import {LinkOutlined, MailOutlined} from "@ant-design/icons";
+import {FileSearchOutlined, LinkOutlined, MailOutlined} from "@ant-design/icons";
+import {useDispatch, useSelector} from "react-redux";
+import {loadFileList} from "../../_redux/actions/fileAction";
 
-const ExternalUserTable = () => {
+const ExternalUserTable = ({extUserList}) => {
 
 
+    const dispatch = useDispatch();
+    const [showModal, setShowModal] = useState(false);
+    const fileList = useSelector(state => state.file['fileList']);
 
+    const onClickFileList = (row) => {
+        dispatch(loadFileList(row.id));
+        setShowModal(true);
+    }
     const onClickCopy = (row) => {
-        console.log(row)
-        navigator.clipboard.writeText(row).then();
+        navigator.clipboard.writeText(row.url).then();
         message.success({content: 'URL copy'}).then();
     }
     const onClickSendMail = () => {
         message.success({content: 'Send Mail'}).then();
     }
 
-    const dataSource = [
-        {key: 1, name: '김씨', startDate: '2022-01-01', endDate: '2022-02-01', url: '김씨 URL'},
-        {key: 2, name: '이씨', startDate: '2022-02-01', endDate: '2022-03-02', url: '이씨 URL'},
-        {key: 3, name: '박씨', startDate: '2022-03-01', endDate: '2022-04-03', url: '박씨 URL'},
-    ]
-
     const columns = [
-        {title: 'Name', dataIndex: 'name', align: 'center'},
-        {title: 'Start Date', dataIndex: 'startDate', align: 'center'},
-        {title: 'End Date', dataIndex: 'endDate', align: 'center'},
+        {title: 'User Name', dataIndex: 'userName', align: 'center'},
+        {title: 'Start Date', dataIndex: 'sDate', align: 'center'},
+        {title: 'End Date', dataIndex: 'eDate', align: 'center'},
         {title: 'File List', align: 'center', render: (row) => (
-                <FileListModal/>
+                <Button onClick={() => onClickFileList(row)} icon={<FileSearchOutlined />}/>
             )},
-        {title: 'URL', dataIndex: 'url', align: 'center', render: (row) => (
+        {title: 'URL', align: 'center', render: (row) => (
                 <Button onClick={() => onClickCopy(row)} icon={<LinkOutlined />}/>
             )},
         {title: 'Send Mail', dataIndex: 'sendMail', align: 'center', render: (row) => (
@@ -39,7 +41,10 @@ const ExternalUserTable = () => {
 
 
     return (
-        <Table columns={columns} dataSource={dataSource}/>
+        <>
+            <Table columns={columns} dataSource={extUserList} rowKey='id'/>
+            <FileListModal fileList={fileList} showModal={showModal} setShowModal={setShowModal}/>
+        </>
     );
 };
 

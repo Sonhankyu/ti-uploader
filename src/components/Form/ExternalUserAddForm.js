@@ -1,27 +1,32 @@
 import React from 'react';
-import {Col, DatePicker, Divider, Form, Input, Row, Select, Table} from "antd";
+import {Button, Col, DatePicker, Divider, Form, Input, InputNumber, Row, Select, Table, TimePicker} from "antd";
+import dayjs from "dayjs";
 
-const InternalUserAddForm = ({form}) => {
+const ExternalUserAddForm = ({form, submit}) => {
 
-    const {RangePicker} = DatePicker;
 
     return (
         <>
-            <Form form={form} layout='vertical'>
+            <Form form={form} onFinish={submit} layout='vertical'>
                 <Row>
                     <Col span={24}>
-                        <Form.Item label='E-mail' name='id' rules={[{required: true, message: ''}]}>
+                        <Form.Item label='Name' name='email' rules={[{required: true, message: 'Please Input'}]}>
                             <Input placeholder={'E-mail'}/>
                         </Form.Item>
                     </Col>
+                    {/*<Col span={24}>*/}
+                    {/*    <Form.Item label='Name' name='name' rules={[{required: true, message: ''}]}>*/}
+                    {/*        <Input placeholder={'Name'}/>*/}
+                    {/*    </Form.Item>*/}
+                    {/*</Col>*/}
                     <Col span={24}>
-                        <Form.Item label='Name' name='name' rules={[{required: true, message: ''}]}>
-                            <Input placeholder={'Name'}/>
+                        <Form.Item label='Upload Expire Time' name='expireTime' rules={[{required: true, message: 'Please Input'}]}>
+                            <InputNumber style={{width: '100%'}} min={1} max={60} placeholder={'Minute'}/>
                         </Form.Item>
                     </Col>
                     <Col span={24}>
-                        <Form.Item label='Upload Period' name='period' rules={[{required: true, message: ''}]}>
-                            <RangePicker/>
+                        <Form.Item>
+                            <Button style={{marginTop: '0.5rem', width: '100%', height: '2.5rem', borderRadius: '0.5rem'}} type='primary' htmlType='submit'>Save</Button>
                         </Form.Item>
                     </Col>
 
@@ -31,4 +36,4 @@ const InternalUserAddForm = ({form}) => {
     );
 };
 
-export default InternalUserAddForm;
+export default ExternalUserAddForm;

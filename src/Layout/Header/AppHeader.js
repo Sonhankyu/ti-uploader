@@ -1,14 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {Button, Col, Layout, Row, Space} from "antd";
+import {Button, Col, Divider, Layout, Row, Space} from "antd";
 import {useHistory, useLocation} from "react-router-dom";
 import UserProfile from "./Profile/UserProfile";
 import HeaderMenu from "./Menu/HeaderMenu";
+import {LogoutOutlined} from "@ant-design/icons";
+import {logoutAction} from "../../_redux/actions/authAction";
+import {useDispatch} from "react-redux";
 
 const AppHeader = () => {
     const { Header } = Layout;
     const [visible, setVisible] = useState(true);
     const url = useLocation().pathname;
     const history = useHistory();
+    const dispatch = useDispatch();
 
 
     useEffect(() => {
@@ -19,26 +23,26 @@ const AppHeader = () => {
         history.push('/main');
     }
     const onClickLogout = () => {
-        localStorage.clear();
-        window.location.reload();
+        const token = window.localStorage.getItem('token');
+        dispatch(logoutAction({jwt : token}));
+        window.localStorage.clear();
     }
 
     return (
         visible === true ?
-            <Header style={{backgroundColor: '#001529'}}>
-                <Row justify='space-between'>
-                    <Row justify='space-between'>
-                        <span style={{height: '60px'}} onClick={onClickMain}>
-                            <img style={{cursor: 'pointer', maxWidth: '100%', maxHeight: '100%'}} src="/images/TI_360x90.png" alt="logo"/>
-                        </span>
-                        <span style={{width: '210px', marginLeft: '5rem'}}>
-                            <HeaderMenu/>
-                        </span>
-                    </Row>
-
-
-                    <Col>
-                        <UserProfile/>
+            <Header style={{lineHeight: '66px', height: '66px', backgroundColor: '#001529'}}>
+                <Row>
+                    <Col flex='100px' style={{height: '60px'}} onClick={onClickMain}>
+                        <img style={{cursor: 'pointer', maxWidth: '100%', maxHeight: '100%'}} src="/images/TI_360x90.png" alt="logo"/>
+                    </Col>
+                    <Col flex='auto' span={22} offset={1}>
+                        <HeaderMenu/>
+                    </Col>
+                    <Col style={{lineHeight: 'normal'}}>
+                        <Space size='large' split={<Divider style={{backgroundColor: 'white'}} type='vertical'/>}>
+                            <UserProfile/>
+                            <Button style={{borderRadius: '1rem'}} onClick={onClickLogout} icon={<LogoutOutlined />}/>
+                        </Space>
                     </Col>
                 </Row>
             </Header>
