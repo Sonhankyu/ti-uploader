@@ -54,6 +54,7 @@ function* createIntUser(action) {
         yield put({
             type: CREATE_INT_USER_SUCCESS,
             payload: user.data,
+            setShowModal: action.setShowModal
         })
     } catch (err) {
         yield put({
@@ -105,6 +106,7 @@ function* createExtUser(action) {
         yield put({
             type: CREATE_EXT_USER_SUCCESS,
             payload: user.data,
+            setShowModal: action.setShowModal
         })
     } catch (err) {
         yield put({

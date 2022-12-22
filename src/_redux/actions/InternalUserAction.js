@@ -17,10 +17,10 @@ export const loadIntUserAction = () => {
     }
 }
 
-export const createIntUserAction = (data) => {
+export const createIntUserAction = (data, setShowModal) => {
     return {
         type: CREATE_INT_USER_REQUEST,
-        data
+        data, setShowModal
     }
 }
 

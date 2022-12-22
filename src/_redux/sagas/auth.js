@@ -79,7 +79,6 @@ function* auth(action) {
     try {
         const auth = yield call(() => authAPI(action.data));
         const info = yield call(infoAPI);
-        console.log(auth, info);
         yield put({
             type: AUTH_SUCCESS,
             auth: auth.data,

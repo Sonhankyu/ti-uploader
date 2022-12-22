@@ -40,6 +40,7 @@ const reducer = (state = initialState, action) => {
             }
         case CREATE_INT_USER_SUCCESS:
             message.success({content: 'Complete create new user'}).then();
+            action.setShowModal(false);
             return {
                 ...state,
                 intUserList: [...action.payload]
@@ -68,6 +69,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
             }
         case CREATE_EXT_USER_SUCCESS:
+            message.success({content: 'Complete create new user'}).then();
+            action.setShowModal(false);
             return {
                 ...state,
                 extUserList: [...action.payload],

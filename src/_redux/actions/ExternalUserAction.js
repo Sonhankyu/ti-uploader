@@ -17,10 +17,10 @@ export const loadExtUserAction = () => {
     }
 }
 
-export const createExtUserAction = (data) => {
+export const createExtUserAction = (data, setShowModal) => {
     return {
         type: CREATE_EXT_USER_REQUEST,
-        data
+        data, setShowModal
     }
 }
 
