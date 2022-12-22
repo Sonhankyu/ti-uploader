@@ -106,6 +106,7 @@ function* changePassword(action) {
         yield put({
             type: CHANGE_PW_SUCCESS,
             payload: response.data,
+            setVisible: action.setVisible
         })
     } catch (err) {
         yield put({

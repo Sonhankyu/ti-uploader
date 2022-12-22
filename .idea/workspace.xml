@@ -1,35 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50c8bd53-1709-4cca-ae14-88548dfc3050" name="ti-uploader-11 API 연결" comment="ti-uploader-11 API 연결">
-      <change afterPath="$PROJECT_DIR$/src/_redux/actions/ExternalUserAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_redux/actions/fileAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_redux/reducers/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_redux/sagas/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_redux/sagas/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Drawer/ProfileDrawer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" afterDir="false" />
+    <list default="true" id="50c8bd53-1709-4cca-ae14-88548dfc3050" name="ti-uploader-11 API 연결" comment="- 내부/외부 유저 생성 및 조회 API 연결&#10;- 유저 패스워드 변경 로직 구현&#10;- 업로드된 파일 리스트 조회 API 연결">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Header/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Header/AppHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layout/Header/Profile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/Header/Profile/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page/AdminPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/AdminPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Page/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Page/MainPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_redux/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/actions/authAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/actions/userAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/actions/InternalUserAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_redux/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/reducers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/reducers/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_redux/sagas/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/sagas/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/sagas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/sagas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axiosConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/ExternalUserAddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/ExternalUserAddForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/InternalUserAddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/InternalUserAddForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/ExternalUserAddModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/ExternalUserAddModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/FileListModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/FileListModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/InternalUserAddModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/InternalUserAddModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/ExternalUserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/ExternalUserTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/InternalUserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/InternalUserTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" afterDir="false" />
     </list>
     <list id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -50,12 +27,15 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/.idea/workspace.xml">
       <ranges>
-        <range start1="3" end1="4" start2="3" end2="36" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="16" end1="16" start2="48" end2="60" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="39" end1="39" start2="83" end2="85" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="49" end1="50" start2="95" end2="96" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="66" end1="68" start2="112" end2="154" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="91" end1="92" start2="177" end2="179" changelist="91b82667-43ae-4f9c-b4be-49c807b54242" />
+        <range start1="3" end1="11" start2="3" end2="4" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="12" end1="17" start2="5" end2="5" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="18" end1="19" start2="6" end2="6" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="20" end1="22" start2="7" end2="7" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="23" end1="32" start2="8" end2="9" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="52" end1="58" start2="29" end2="38" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="145" end1="146" start2="125" end2="127" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="147" end1="148" start2="128" end2="136" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="177" end1="178" start2="165" end2="168" changelist="91b82667-43ae-4f9c-b4be-49c807b54242" />
       </ranges>
     </file>
   </component>
@@ -143,9 +123,17 @@
       <workItem from="1669617997337" duration="309000" />
       <workItem from="1669618674675" duration="402000" />
       <workItem from="1670393929976" duration="349000" />
-      <workItem from="1670394988853" duration="36086000" />
+      <workItem from="1670394988853" duration="42082000" />
+      <workItem from="1671672506428" duration="2007000" />
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- 내부/외부 유저 생성 및 조회 API 연결&#10;- 유저 패스워드 변경 로직 구현&#10;- 업로드된 파일 리스트 조회 API 연결">
+      <created>1670496221858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670496221858</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers>
       <GitHub url="https://github.com">
         <option name="repoAuthor" value="Sonhankyu" />

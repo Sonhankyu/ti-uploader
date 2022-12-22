@@ -6,6 +6,7 @@ import {
     LOGIN_REQUEST,
     LOGIN_SUCCESS, LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS
 } from "../actions/authAction";
+import {message} from "antd";
 
 export const initialState = {
     auth: '',
@@ -61,6 +62,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
             }
         case CHANGE_PW_SUCCESS:
+            message.success({content: 'Change Password Completed'}).then();
+            action.setVisible(false);
             return {
                 ...state,
                 info: action.payload

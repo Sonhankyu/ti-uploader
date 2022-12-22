@@ -26,7 +26,7 @@ const ChangePasswordModal = ({visible, setVisible, userInfo}) => {
         form.validateFields().then((value) => {
             dispatch(changePassword({
                 "password": value.newPassword
-            }))
+            }, setVisible))
         })
     }
 

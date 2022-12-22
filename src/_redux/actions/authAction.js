@@ -35,10 +35,10 @@ export const authAction = (data) => {
     }
 }
 
-export const changePassword = (data) => {
+export const changePassword = (data, setVisible) => {
     return {
         type: CHANGE_PW_REQUEST,
-        data
+        data, setVisible
     }
 }
 
