@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50c8bd53-1709-4cca-ae14-88548dfc3050" name="ti-uploader-11 API 연결" comment="- 내부/외부 유저 생성 및 조회 API 연결&#10;- 유저 패스워드 변경 로직 구현&#10;- 업로드된 파일 리스트 조회 API 연결">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/actions/authAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/reducers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_redux/sagas/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/sagas/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_redux/sagas/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/sagas/user.js" afterDir="false" />
     </list>
-    <list id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,25 +13,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="ti-uploader-11" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="3" end1="11" start2="3" end2="4" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="12" end1="17" start2="5" end2="5" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="18" end1="19" start2="6" end2="6" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="20" end1="22" start2="7" end2="7" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="23" end1="32" start2="8" end2="9" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="52" end1="58" start2="29" end2="38" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="145" end1="146" start2="125" end2="127" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="147" end1="148" start2="128" end2="136" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
-        <range start1="177" end1="178" start2="165" end2="168" changelist="91b82667-43ae-4f9c-b4be-49c807b54242" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
