@@ -10,6 +10,10 @@ export const AUTH_REQUEST = 'AUTH_REQUEST';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
 export const AUTH_FAILURE = 'AUTH_FAILURE';
 
+export const CHANGE_PW_REQUEST = 'CHANGE_PW_REQUEST';
+export const CHANGE_PW_SUCCESS = 'CHANGE_PW_SUCCESS';
+export const CHANGE_PW_FAILURE = 'CHANGE_PW_FAILURE';
+
 export const loginAction = (data) => {
     return {
         type: LOGIN_REQUEST,
@@ -28,6 +32,13 @@ export const authAction = (data) => {
     return {
         type: AUTH_REQUEST,
         data
+    }
+}
+
+export const changePassword = (data, setVisible) => {
+    return {
+        type: CHANGE_PW_REQUEST,
+        data, setVisible
     }
 }
 

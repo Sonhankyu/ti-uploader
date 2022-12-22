@@ -3,7 +3,7 @@ import {Button, message, Table} from "antd";
 import FileListModal from "../Modal/FileListModal";
 import {LinkOutlined, MailOutlined} from "@ant-design/icons";
 
-const ExternalUserTable = () => {
+const InternalUserTable = ({userList}) => {
 
 
     const onClickCopy = () => {
@@ -21,7 +21,7 @@ const ExternalUserTable = () => {
 
     const columns = [
         {title: 'Name', dataIndex: 'name', align: 'center'},
-        {title: 'E-mail', dataIndex: 'email', align: 'center'},
+        {title: 'E-mail', dataIndex: 'id', align: 'center'},
         {title: 'Role', dataIndex: 'role', align: 'center'},
         // {title: 'File List', align: 'center', render: (row) => (
         //     <FileListModal/>
@@ -36,8 +36,8 @@ const ExternalUserTable = () => {
 
 
     return (
-        <Table columns={columns} dataSource={dataSource}/>
+        <Table columns={columns} dataSource={userList} rowKey="key"/>
     );
 };
 
-export default ExternalUserTable;
+export default InternalUserTable;

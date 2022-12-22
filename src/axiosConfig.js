@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import axios from "axios";
 import {message} from "antd";
 
 const AxiosInterceptor = ({children}) => {
-    axios.defaults.baseURL = 'http://192.168.0.100:3031/';
+    // axios.defaults.baseURL = 'http://192.168.0.100:3031/';
     axios.defaults.headers['X-AUTH-TOKEN'] = window.localStorage.getItem('token');
 
     useEffect(() => {

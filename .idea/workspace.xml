@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="" />
+    <list default="true" id="50c8bd53-1709-4cca-ae14-88548dfc3050" name="ti-uploader-11 API 연결" comment="- 내부/외부 유저 생성 및 조회 API 연결&#10;- 유저 패스워드 변경 로직 구현&#10;- 업로드된 파일 리스트 조회 API 연결">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_redux/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/actions/authAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_redux/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_redux/sagas/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_redux/sagas/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/ChangePasswordModal.js" afterDir="false" />
+    </list>
+    <list id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,21 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="3" end1="11" start2="3" end2="4" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="12" end1="17" start2="5" end2="5" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="18" end1="19" start2="6" end2="6" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="20" end1="22" start2="7" end2="7" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="23" end1="32" start2="8" end2="9" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="52" end1="58" start2="29" end2="38" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="145" end1="146" start2="125" end2="127" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="147" end1="148" start2="128" end2="136" changelist="50c8bd53-1709-4cca-ae14-88548dfc3050" />
+        <range start1="177" end1="178" start2="165" end2="168" changelist="91b82667-43ae-4f9c-b4be-49c807b54242" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,6 +61,8 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;tasks.servers&quot;,
+    &quot;tasks.open.task.update.state.enabled&quot;: &quot;false&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   }
 }</component>
@@ -47,7 +73,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
       <changelist id="91b82667-43ae-4f9c-b4be-49c807b54242" name="Changes" comment="" />
       <created>1668477167968</created>
       <option name="number" value="Default" />
@@ -64,8 +90,56 @@
       <option name="project" value="LOCAL" />
       <updated>1668506825267</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
-    <servers />
+    <task id="LOCAL-00003" summary="axios-Interceptor">
+      <branch name="dev" repository="D:\Dev\Intellij\ti-uploader" original="true" />
+      <branch name="axios-Interceptor" repository="D:\Dev\Intellij\ti-uploader" />
+      <created>1668585656860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669101287392</updated>
+      <workItem from="1668586170726" duration="5620000" />
+    </task>
+    <task id="LOCAL-00004" summary="axios-Interceptor Config Setting">
+      <created>1668588127235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668588127235</updated>
+    </task>
+    <task active="true" id="ti-uploader-11" summary="API 연결">
+      <branch name="dev" repository="D:\Dev\Intellij\ti-uploader" original="true" />
+      <branch name="ti-uploader-11" repository="D:\Dev\Intellij\ti-uploader" />
+      <changelist id="50c8bd53-1709-4cca-ae14-88548dfc3050" name="ti-uploader-11 API 연결" comment="" />
+      <created>1669101233000</created>
+      <option name="issue" value="true" />
+      <url>https://github.com/Sonhankyu/ti-uploader/issues/11</url>
+      <option name="number" value="11" />
+      <option name="presentableId" value="ti-uploader-11" />
+      <option name="project" value="ti-uploader" />
+      <option name="type" value="BUG" />
+      <updated>1669101287392</updated>
+      <workItem from="1669101288118" duration="2624000" />
+      <workItem from="1669617997337" duration="309000" />
+      <workItem from="1669618674675" duration="402000" />
+      <workItem from="1670393929976" duration="349000" />
+      <workItem from="1670394988853" duration="42082000" />
+      <workItem from="1671672506428" duration="2007000" />
+    </task>
+    <task id="LOCAL-00005" summary="- 내부/외부 유저 생성 및 조회 API 연결&#10;- 유저 패스워드 변경 로직 구현&#10;- 업로드된 파일 리스트 조회 API 연결">
+      <created>1670496221858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670496221858</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers>
+      <GitHub url="https://github.com">
+        <option name="repoAuthor" value="Sonhankyu" />
+        <option name="repoName" value="ti-uploader" />
+      </GitHub>
+    </servers>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

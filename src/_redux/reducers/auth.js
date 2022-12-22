@@ -1,14 +1,16 @@
 import {
     AUTH_FAILURE,
     AUTH_REQUEST,
-    AUTH_SUCCESS,
+    AUTH_SUCCESS, CHANGE_PW_FAILURE, CHANGE_PW_REQUEST, CHANGE_PW_SUCCESS,
     LOGIN_FAILURE,
     LOGIN_REQUEST,
     LOGIN_SUCCESS, LOGOUT_FAILURE, LOGOUT_REQUEST, LOGOUT_SUCCESS
 } from "../actions/authAction";
+import {message} from "antd";
 
 export const initialState = {
     auth: '',
+    info: {}
 }
 
 const reducer = (state = initialState, action) => {
@@ -48,11 +50,29 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 auth: action.auth,
+                info: action.info
             }
         case AUTH_FAILURE:
             return {
                 ...state,
             }
+
+        case CHANGE_PW_REQUEST:
+            return {
+                ...state,
+            }
+        case CHANGE_PW_SUCCESS:
+            message.success({content: 'Change Password Completed'}).then();
+            action.setVisible(false);
+            return {
+                ...state,
+                info: action.payload
+            }
+        case CHANGE_PW_FAILURE:
+            return {
+                ...state,
+            }
+
         default:
             return {
                 ...state
